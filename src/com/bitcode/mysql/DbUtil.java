@@ -149,7 +149,47 @@ public class DbUtil {
         }
 
     }
+
+    public void getRecord(int yr, String grade) {
+
+        String query;
+
+        if (grade.equalsIgnoreCase("First")) {
+            query = "SELECT * FROM student WHERE year = ? AND marks >= 65";
+        } else if (grade.equalsIgnoreCase("Second")) {
+            query = "SELECT * FROM student WHERE year = ? AND marks < 65";
+        } else {
+            query = "SELECT * FROM student WHERE year = ?";
+        }
+
+        try {
+            Connection con = getConnection();
+            PreparedStatement stmt = con.prepareStatement(query);
+
+            stmt.setInt(1, yr);
+
+            ResultSet result = stmt.executeQuery();
+
+            while (result.next()) {
+                Student s = new Student(
+                        result.getInt("roll"),
+                        result.getString("name"),
+                        result.getInt("marks"),
+                        result.getInt("year")
+                );
+
+                System.out.println(s);
+            }
+
+            con.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
-//Display the list of the student who scored first class in perticular year
-//Cretae a Menu Driven Program For Student record Manipulation and read the values from the user 
+//Display the list of the student who scored first class in perticular year == solved
+//Cretae a Menu Driven Program For Student record Manipulation and read the values from the user
+//year marks list of students. == solved
+//who passed with first class in the year specified. == solved
