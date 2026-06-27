@@ -1,6 +1,7 @@
 package com.mj.oops.linearsearch;
 
 public class MaxWealth {
+    //https://leetcode.com/problems/richest-customer-wealth/description/
     public static void main(String[] args){
 
         int[][] accounts ={
