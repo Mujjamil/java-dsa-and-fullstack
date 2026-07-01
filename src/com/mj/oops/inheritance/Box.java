@@ -4,7 +4,7 @@ public class Box {
     double h;
     double w;
     double l;
-    double weight;
+//    double weight;
 
     Box(){
         this.h=-1;
@@ -14,6 +14,7 @@ public class Box {
 
 
     Box(double l , double h , double w){
+        System.out.println("Box class contructor");
         this.h=-1;
         this.w=-1;
         this.l=-1;
@@ -21,6 +22,7 @@ public class Box {
 
     //cube
     Box(double side){
+       // super(); Object class
         this.h=side;
         this.w=side;
         this.l=side;
