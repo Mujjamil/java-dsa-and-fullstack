@@ -1,0 +1,23 @@
+<!-- Using if..else, write the code which gets a number via prompt and then shows in alert:
+
+1, if the value is greater than zero,
+-1, if less than zero,
+0, if equals zero.
+In this task we assume that the input is always a number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        let value = prompt('Insert the number:',1);
+        let message = (value > 0) ? 'the value is greater than zero' : (value < 0) ? 'lesst then zero' : (value == 0) ? 'equals to zero' : 'add another number';
+        alert(message)
+    </script>
+</body>
+</html>
