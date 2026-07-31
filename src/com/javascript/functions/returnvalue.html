@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<script>
+    "use strict"
+    function checkAge(age){
+        if(age >= 18){
+            return true;
+        }else{
+            return confirm("Do you have permission from your parent?")
+        }
+    }
+
+    let age = prompt("Enter your age",18);
+    if(checkAge(age)){
+        alert("Access granted")
+    }else{
+        alert('access denied')
+    }
+
+    
+</script>

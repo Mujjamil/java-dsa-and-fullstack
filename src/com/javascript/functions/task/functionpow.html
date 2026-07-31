@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<script>
+    let a = prompt("write number 1:");
+    let b = prompt("write number 2:");
+
+    if( b < 1){
+        alert("there is no power lesser than one")
+    }else{
+        alert(pow(a,b));
+    }
+
+    function pow(a , b){
+        let result = a;
+        for(let i = 0 ; i < b ; i++){
+            result = result * a;
+        }
+        return result;
+    }
+</script>
