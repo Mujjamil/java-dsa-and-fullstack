@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<script>
+    "use strict"
+    function ask(question , yes , no){
+        if(confirm(question))yes()
+        no();
+    }
+
+    function showOk(){
+        alert("do you agreeed")
+    }
+    function showCancel(){
+        alert("Yore not agreed")
+    }
+
+    ask("Do you agreed?",showOk , showCancel);
+</script>

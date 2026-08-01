@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<script>
+    "use strict";
+    function ask(question , yes , no){
+        if(confirm(question))yes()
+        else no()
+    }
+    ask("Do you agree",
+        function(){alert("Yes your agreed!")},
+        function(){alert("NO Your not agreed")}
+    )
+</script>
