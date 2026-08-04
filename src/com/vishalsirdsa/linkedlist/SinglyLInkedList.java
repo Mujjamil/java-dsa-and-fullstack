@@ -1,4 +1,4 @@
-package com.vishalsirdsa;
+package com.vishalsirdsa.linkedlist;
 
 public class SinglyLInkedList {
 
