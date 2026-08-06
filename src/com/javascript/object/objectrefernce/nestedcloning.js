@@ -12,3 +12,4 @@ let clone = Object.assign({},user);
 
 console.log("widht = "+clone.sizes.width);
 
+    
