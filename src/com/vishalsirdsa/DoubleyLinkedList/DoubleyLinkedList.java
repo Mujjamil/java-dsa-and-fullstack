@@ -5,7 +5,7 @@ public class DoubleyLinkedList {
     public DoubleyLinkedList(){
         head = null;
     }
-    public boolean newNode(int data){
+    public boolean insert(int data){
         Node newNode = new Node(data);
         if(newNode == null){
             return false;
