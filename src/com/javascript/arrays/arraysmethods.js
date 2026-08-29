@@ -9,6 +9,10 @@ console.log(typeof(cars));//it will show the type of object becauese array are a
 //to solve this problem you can use
 console.log(Array.isArray(cars));//array.isarray method
 
+console.log(cars.join("*"));//joins the array element into string but in addition we can specify the seprator.
+
+
+
 
 
 
