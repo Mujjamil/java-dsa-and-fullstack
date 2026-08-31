@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <body>
     <h1>Sorting method</h1>
-    <p id="demo1"></p>
-    <p id="demo2"></p>
+    <p id="demo1">Array</p>
+    <p id="demo2">Sorting</p>
+    <p id="demo3">Reverse</p>
+    <p id="demo4">toSort</p>
+    <p id="demo5">toReverse</p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
     <script>
         const fruits = ["Banana", "Orange", "Apple", "Mango"];
-        document.getElementById("demo1").innerHTML = fruits;
-        fruits.sort();//sorts the array
-        document.getElementById("demo2").innerHTML = fruits;
+        document.getElementById("demo1").innerHTML = "array of fruits = "+fruits;
+
+        fruits.sort();//sorts the original array
+        document.getElementById("demo2").innerHTML = "sorting of fruits = "+fruits ;
+
+        fruits.reverse();//reverse the array
+        document.getElementById("demo3").innerHTML = "Reverse of array = "+fruits;
+
+        const sortedFruits = fruits.toSorted();//sort the array but makes duplicate first means without altering original array 
+        document.getElementById("demo4").innerHTML = "to Sorted of array = "+sortedFruits;
+
+        const reversedFruits = fruits.toReversed();//Reverse the array but makes duplicate first means without altering original array 
+        document.getElementById("demo5").innerHTML = "to Reversed of array = "+reversedFruits;
+
+        const points = [40, 100, 1, 5, 25, 10];
+        let numberSort = points.sort(function(a,b){return a - b});
+        document.getElementById("demo6").innerHTML = "Sorting the numbers = "+numberSort;
+
+        let numberSortDecending = points.sort(function(a,b){return b - a});
+        document.getElementById("demo7").innerHTML = "Sorting the numbers in Decending Order = "+numberSortDecending;
     </script>
 </body>
