@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<body>
+    <h1>Min and Mox Examples</h1>
+    <p>The Lowest Number is <span id="demo"></span></p>
+    <p>The Highest Number is <span id="demo1"></span></p>
+    <script>
+        const points = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo").innerHTML = lowestValue(points);
+        function lowestValue(arr){
+            return Math.min.apply(null,arr);
+        }
+        document.getElementById("demo1").innerHTML = highestValue(points);
+        function highestValue(arr){
+            return Math.max.apply(null,arr);
+        }
+    </script>
+</body>
