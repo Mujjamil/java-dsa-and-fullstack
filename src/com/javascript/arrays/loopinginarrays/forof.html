@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<body>
+    <h1>for of</h1>
+    <p id="demo"></p>
+    <h2>for in</h2>
+    <p id="demo1"></p>
+
+    <h3>ForEach</h3>
+    <p id="demo2"></p>
+    <script>
+        const cars = ["BMW", "Mercedes" , "Volkswagon"];//for of 
+        let text = " ";
+        for (let x of cars) {
+            text += x + "<br>";
+        }
+
+        let textt = " ";
+        for(let v in cars){
+            textt += v + "<br>";
+        }
+
+        let words = " ";
+        cars.forEach(myFunction);
+                      
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("demo1").innerHTML = textt;
+        document.getElementById("demo2").innerHTML = words;
+
+        function myFunction(value , index , array){
+            words += value + "<br>";
+        }
+    </script>
+</body>
