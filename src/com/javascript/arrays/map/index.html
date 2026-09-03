@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<body>
+    <h1>Doing mapping on the array</h1>
+    <p id="demo"></p>
+    <script>
+        const numbers1 = [23,45,56,71,64,98];
+        const numbers2 = numbers1.map(myFunction2);//map function create new array by performing a function on each array element.
+        document.getElementById("demo").innerHTML = JSON.stringify(numbers2);
+        function myFunction (value , index , array){
+            return value*2;
+        }
+        function myFunction2(value){
+            return value*2;
+        }
+
+    </script>
+</body>
+<!-- 
+Note that the functino takes 3 arguments 
+The item value
+The item index
+The array itself
+
+When the value function uses only the value parameters , the index and array parameters can be ommited. -->
