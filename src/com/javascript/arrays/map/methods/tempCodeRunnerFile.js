@@ -1,0 +1,1 @@
+let over18 = numbers.every(myFunction);
