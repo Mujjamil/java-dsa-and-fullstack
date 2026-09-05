@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<body>
+    <h1>Entries</h1>
+    <p id="demo"></p>
+    <script>
+        const fruits = ["Banana","Apple","Mango","Berry"];
+        const f = fruits.entries();//gives value in key value pair
+        for(let x of f){
+            document.getElementById("demo").innerHTML += x + "<br>";
+        }
+    </script>
+</body>
