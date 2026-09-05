@@ -8,7 +8,7 @@ public class Son extends Parent{
     }
 
     @Override
-    void career() {
+    public void career() {
         System.out.println("I am going to be a doctor");
     }
 
