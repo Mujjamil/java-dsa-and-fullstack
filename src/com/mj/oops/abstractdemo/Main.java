@@ -5,9 +5,11 @@ public class Main {
         Son son = new Son();
         son.career();
         son.partner();
+        son.normal();
 
         Daughter daughter = new Daughter();
         daughter.career();
         daughter.partner();
+
     }
 }

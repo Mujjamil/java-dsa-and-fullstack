@@ -11,4 +11,9 @@ public class Son extends Parent {
     void partner() {
         System.out.print("my love is And her name is : Tanisha age is:23");
     }
+
+    @Override
+    void normal() {
+        super.normal();
+    }
 }
