@@ -1,20 +1,20 @@
 # Q1. What is the difference between a parameter and an argument?
-#  we pass the variables in function declration that is parameter
-#  while when we pass actual values for getting result is argumetns
+# A parameter is a variable defined in the function definition, 
+# while an argument is the actual value passed to the function when calling the function.
 
 # Q2. What is the difference between return and print()?
-# return gives value to the function in return
-# print give the value and print while its callable()
+# return sends a value back to the caller.
+# print() only displays the value.
 
 # Q3. What happens if a Python function has no return statement?
-# then the values will be not return to the function as result it will not print or call that values while execution
+#If a function doesn’t explicitly return a value, Python implicitly returns None.
 
 # Q4. What is *args?
-# if we want to pass multiple numbers to arguments then we use *args and its gives result in tuple
+#“*args allows a function to accept a variable number of positional arguments.
+#Inside the function, those arguments are available as a tuple.”
 
 # Q5. What is **kwargs?
-# if we want to pass multiple key value pairs to
-#  the arguments we can use **kwargs as result it give dictionary
+# **kwargs allows a function to accept a variable number of keyword arguments, and Python stores them as a dictionary.”
 
 # Q6. What data type does *args store?
 # it gives tuple datatype
@@ -23,28 +23,28 @@
 # it gives dictionary data type
 
 # Q8. What is a lambda function?
-# it small way to write anonymous function 
+# “A lambda function is a small anonymous function that can contain a single expression.”
 
 # Q9. Difference between map() and filter()?
-# map() used to run function or method on every element
-# while filter 
+# “map() applies a function to every element and transforms the values, 
+# while filter() keeps only the elements for which the condition is true.”
 
 # Q10. What is a module?
-# module is used to resuse the code like its resuable code file
+#“A module is a Python file containing reusable code such as functions, classes, and variables that can be imported into another Python program.”
 
 # Q11. Difference between a module and package?
-# module is single file which resuable code file and package which handle multiple files and folders structure
+# “A module is typically a single Python file containing reusable code, 
+# while a package is a directory structure used to organize related modules.”
 
 # Q12. Why do we use exception handling?
-# to ensure and run the code with exceptioins
+# “Exception handling allows us to handle runtime errors gracefully so that the program can respond appropriately instead of terminating unexpectedly.”
 
 # # Q13. Difference between except, else, and finally?
-# except takes the error arguments and we can define theer what will be the error
-# else give the result or anything we else
-# finally gives the result no matter what will be the erro and all
+# “except handles an exception, else executes when no exception occurs,
+#  and finally executes regardless of whether an exception occurred.”
 
 # Q14. What does raise do?
-# raise is used to write error messages in short
+# “raise is used to explicitly raise an exception when a particular condition occurs.”
 
 
 
@@ -87,15 +87,15 @@ print(even)
 # Q20. Write a program that safely divides two numbers using try/except.
 num1 = int(input("Enter the first number:"))
 num2 = int(input("Enter the second number:"))
-
 try:
-   result = num1 / num2
-   print(result)
-except ZeroDivisionError:
-   print("cannot divided by zero")
-finally:
-   print("The result is this :",result)
+    result = num1 / num2
+    print(result)
 
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+finally:
+    print("Division operation completed")
 # Output question
 # What will this produce?
 def test(*args, **kwargs):
