@@ -19,4 +19,3 @@ def employee(name,age):
     print(name,age)
 
 employee("Mujjamil",26)
-
