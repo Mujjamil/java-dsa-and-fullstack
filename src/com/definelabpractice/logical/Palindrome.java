@@ -3,7 +3,8 @@ package com.definelabpractice.logical;
 public class Palindrome {
     public static void main(String[] args){
         int num = 121;
-        int original = num;
+
+        int original = num;//with integer option
         int reverse = 0;
         while(num != 0){
             int digit = num % 10;
@@ -15,6 +16,11 @@ public class Palindrome {
         }else{
             System.out.println("The given number is not palindrome");
         }
+
+        String str = Integer.toString(num);// with string option
+        String reverseStr = new StringBuilder(str).reverse().toString();
+        System.out.println(str.equals(reverseStr)?"The number is palindrom":"The number is not palindrom");
+
 
 
     }
