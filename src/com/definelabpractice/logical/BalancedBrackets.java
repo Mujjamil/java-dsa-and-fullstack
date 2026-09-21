@@ -1,6 +1,5 @@
 package com.definelabpractice.logical;
 
-import com.mj.oops.packagess.a.Greeting;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
