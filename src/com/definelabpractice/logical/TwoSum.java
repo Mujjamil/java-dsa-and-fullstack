@@ -10,7 +10,7 @@ public class TwoSum {
         for (int i = 0; i < arr.length; i++) {
             int complement = target - arr[i];
             if(map.containsKey(complement)){
-                System.out.println("Values "+complement+arr[i]);
+                System.out.println("Values "+complement+" + "+arr[i]+" = "+target);
                 System.out.println("Indices "+map.get(complement)+" , "+i);
                 return;
             }
