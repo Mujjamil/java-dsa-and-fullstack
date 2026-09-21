@@ -13,16 +13,16 @@ public class BalancedBrackets {
     }
     static boolean isBalanced(String str){
 
-        Deque<Character> stack = new ArrayDeque<>();//created empty stack
+        Deque<Character> stack = new ArrayDeque<>();//created empty stack to store the characters
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
             if(ch == '[' || ch == '{' || ch == '('){
-                stack.push(ch);
+                stack.push(ch);//store character in stack
             } else if (ch == ']' || ch == '}' || ch == ')') {
                 if(stack.isEmpty()){
                     return false;
                 }
-                char top = stack.pop();
+                char top = stack.pop();//popped the character for comparing its same or not
                 if(!isMatchingPair(top,ch)){
                     return false;
                 }
