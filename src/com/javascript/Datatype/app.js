@@ -1,0 +1,1 @@
+console.log(typeof 2);//gives the type of element
