@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <style>
     .model-overlay{
-        display: none;
+        /* display: none; */
         position: fixed;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
+
+        /* adding some animation */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease , visibility 0.3s ease;
     }
 
     .model-overlay.show{
-        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 
     .modal-box{
@@ -22,6 +28,14 @@
         padding: 20px;
         border-radius: 10px;
         position: relative;
+
+         /* Small slide effect along with fade */
+         transform: translate(-20x);
+         transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.show.modal-box{
+        transform: translateY(0);
     }
 
     .modal-close{
