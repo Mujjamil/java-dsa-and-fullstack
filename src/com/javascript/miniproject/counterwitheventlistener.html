@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<body>
+    <h1>Counter with Event listener</h1>
+    <p id="count" style="font-size: 40px;"></p>
+
+    <button id="btnPlus">+</button>
+    <button id="btnMinus">-</button>
+    <button id="btnReset">Reset</button>
+    <button id="btnSave">Save</button>
+    <button id="btnLoad">Load</button>
+
+    <script>
+
+        document.getElementById("btnPlus").addEventListener("click", increaseCount);
+        document.getElementById("btnMinus").addEventListener("click", decreaseCount);
+        document.getElementById("btnReset").addEventListener("click", resetCount)
+        document.getElementById("btnSave").addEventListener("click", saveCount)
+        document.getElementById("btnLoad").addEventListener("click", loadCount)
+
+        // Declare the counter
+        let count = 0;
+
+        // Load counter when the page opens
+        loadCount();
+
+        // Function to display the counter
+        function updateCount() {
+            document.getElementById("count").innerHTML = count;
+        }
+
+        // Function to increase the counter
+        function increaseCount() {
+            count++;
+            updateCount();
+        }
+
+        function decreaseCount(){
+            count--;
+            updateCount();
+        }
+
+        function resetCount(){
+            count = 0;
+            updateCount();
+        }
+
+        function saveCount(){
+            localStorage.setItem("count",count);
+        }
+
+
+        function loadCount(){
+          let saved = localStorage.getItem("count");
+            if(saved!=null){
+                count = Number(saved)
+            }
+            updateCount();
+        }
+
+
+
+
+    </script>
+</body>
