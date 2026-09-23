@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<style>
+    .model-overlay{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .model-overlay.show{
+        display: block;
+    }
+
+    .modal-box{
+        background: white;
+        width: 90%;
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .modal-close{
+        position: absolute;
+        right: 12px;
+        top: 8px;
+        font-size: 24px;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h2>Modal Popup</h2>
+    <button id="openBtn">Open Modal</button>
+    <div id="modal" class="model-overlay">
+        <div class="modal-box">
+            <button id="closeBtn" class="modal-close">x</button>
+            <h3>Hello</h3>
+            <p>This is Modal Pop.</p>
+        </div>
+    </div>
+
+    <script>
+
+        const openBtn = document.getElementById("openBtn");
+        const closeBtn = document.getElementById("closeBtn")
+        const modal = document.getElementById("modal")
+
+        function openModal(){
+            modal.classList.add("show");
+        }
+        function closeModal(){
+            modal.classList.remove("show");
+        }
+
+        openBtn.addEventListener("click",openModal);
+        closeBtn.addEventListener("click",closeModal);
+
+        modal.addEventListener("click",function (event){
+            if(event.target == modal){
+                closeModal();
+            }
+        })
+
+        document.addEventListener("keydown",function (event){
+            if(event.key === "Escape"){
+                closeModal();
+            }
+        })
+    </script>
+</body>
