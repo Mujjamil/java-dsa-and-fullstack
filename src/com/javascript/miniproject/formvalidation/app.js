@@ -1,4 +1,4 @@
-const form = document.getElementById("sigsignUpform");
+const form = document.getElementById("signUpform");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email")
 const passwordInput = document.getElementById("password");
@@ -7,7 +7,7 @@ const nameError = document.getElementById("nameError");
 const emailError = document.getElementById("emailError");
 const passError = document.getElementById("passError");
 const confirmError = document.getElementById("confrimpassError");
-const result = document.getElementById("submit")
+const result = document.getElementById("result")
 
 //function to show error
 function showError(el,message){
@@ -21,7 +21,7 @@ function clearError(el){
 
 //function to validate name
 function validateName(){
-    let value = nameInput.value.trim;
+    let value = nameInput.value.trim();
     if(value.length < 2){
         showError(nameError , "The Character must be more than 2")
         return false
@@ -34,7 +34,7 @@ function validateName(){
 
 //function to validate email
 function validateEmail(){
-    let value = emailInput.value.trim;
+    let value = emailInput.value.trim();
     if(!(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))){
         showError(emailError , "Enter the valid Input")
         return false;
@@ -78,3 +78,21 @@ function validateForm(){
     let okConfirmPass = validateConfirmPass();
     return okName && okEmail && okPass && okConfirmPass;
 }
+
+//Prevent Default Reloading
+form.addEventListener("submit",function(event){
+    event.preventDefault();
+
+    //clear Result
+    result.innerHTML = "";
+
+
+    //validate Form
+    if(validateForm()){
+        result.innerHTML = "Form is valid"
+        result.className = "ok"
+    }else{
+        result.innerHTML = "Please fix the error";
+        result.classList = "error"
+    }
+});
