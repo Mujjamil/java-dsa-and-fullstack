@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style></style>
+    <h2>Form Validation</h2>
+    <form id="signUpform">
+        <div class="field">
+            <label>Name</label><br>
+            <input id="name" type="text" placeholder="Your name">
+            <p id="nameError" class="error"></p>
+        </div>
+
+        <div class="field">
+            <label>Email</label><br>
+            <input id="email" type="text" placeholder="name@gmail.com">
+            <p id="emailError" class="error"></p>
+        </div>
+
+        <div class="field">
+            <label>Password</label><br>
+            <input id="password" type="password" placeholder="Minimum 8 Character">
+            <p id="passError" class="error"></p>
+        </div>
+
+        <div class="field">
+            <label>Confirm Password</label><br>
+            <input id="confirm" type="password" placeholder="Repeat password">
+            <p id="confrimpassError" class="error" ></p>
+        </div>
+
+        <p><button type="submit">Create Account</button></p>
+    </form>
+
+    <p id="result"></p>
+
+   <script src="app.js"></script>
+</body>

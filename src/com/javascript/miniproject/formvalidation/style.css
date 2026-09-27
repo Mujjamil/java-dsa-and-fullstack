@@ -1,0 +1,16 @@
+input{
+    padding: 8px;
+    width: 260px;
+    margin-bottom: 4px;
+}
+.error{
+    color: red;
+    margin: 0;
+}
+.ok{
+    color: green;
+    margin: 0;
+}
+.field{
+    margin-bottom: 12px;
+}
