@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<body>
+    <h1>Javascript Fetch Api</h1>
+    <p id="demo"></p>
+    <script>
+        async function loadText(file){
+            const response = await fetch(file);
+            myDisplayer(await response.text())
+        }
+
+        loadText("fetch.txt");
+        myDisplayer("Javascript Continues")
+        function myDisplayer(text){
+            document.getElementById("demo").innerHTML += text;
+        }
+    </script>
+</body>
