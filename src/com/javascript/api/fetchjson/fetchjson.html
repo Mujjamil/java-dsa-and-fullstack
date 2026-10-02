@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<body>
+    <p id="demo"></p>
+    <script>
+        async function loadJson(){
+            const response = await fetch("customer.json");//fetch the json file 
+            const customer = await response.json();//converts json file into javascript object
+            myDisplayer(customer.name);
+            myDisplayer(customer.city);
+        }
+        loadJson();
+        function myDisplayer(text){
+            document.getElementById("demo").innerHTML += text + "<br>";
+        }
+    </script>
+</body>
