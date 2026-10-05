@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<body>
+    <h1>Web Worker Api</h1>
+    <p>Start Counting : <output id="result"></output></p>
+    <button onclick="startWoker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <script>
+        let w;
+
+        function startWoker(){
+            if(typeof(w)=="undefined"){
+                w = new Worker("web_server.js");
+            }
+            w.onmessage = function(event){
+                document.getElementById("result").innerHTML = event.data;
+            }
+        }
+        function stopWorker(){
+            w.terminate();
+            w = undefined;
+        }
+    </script>
+</body>
