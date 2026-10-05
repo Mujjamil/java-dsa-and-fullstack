@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<body>
+    <h1>Getting geolocation longitude and latitude with using geolocation api</h1>
+    <button onclick="getLocation()">try it</button>
+    <p id="demo"></p>
+    <script>
+        const x = document.getElementById("demo");
+
+        function getLocation(){
+        try{
+            navigator.geolocation.getCurrentPosition(showPosition)
+        }catch(err){
+            x.innerHTML = err;
+        }
+    }
+
+        function showPosition(position){
+            x.innerHTML = "Latitude:"+ position.coords.latitude + 
+            "<br>" + "Longitude" + position.coords.longitude
+        }
+    </script>
+</body>

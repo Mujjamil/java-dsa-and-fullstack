@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<body>
+    <input id="name" value="John">
+<input id="age" type="number" value="30">
+<button onclick="sendPerson()">Send</button>
+
+<p id="demo"></p>
+
+<script>
+async function sendPerson() {
+  const person = {
+    name: document.getElementById("name").value,
+    age: Number(document.getElementById("age").value)
+  };
+
+  try {
+    const response = await fetch("/api/person", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(person)
+    });
+
+    if (!response.ok) {
+      throw new Error("HTTP error " + response.status);
+    }
+
+    const result = await response.json();
+
+    document.getElementById("demo").textContent =
+    result.message;
+  }
+  catch (error) {
+    document.getElementById("demo").textContent =
+    error.message;
+  }
+}
+</script>
+</body>
