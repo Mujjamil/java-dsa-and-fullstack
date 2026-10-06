@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<body>
+    <h1>callback function example</h1>
+    <p id="demo"></p>
+    <script>
+        function myDisplayer(some){
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        function sumCalculator(x,y){
+            let sum = x+y;
+            return sum;
+        }
+        
+
+        let result = sumCalculator(3,4);
+        myDisplayer(result);
+    </script>
+</body>
