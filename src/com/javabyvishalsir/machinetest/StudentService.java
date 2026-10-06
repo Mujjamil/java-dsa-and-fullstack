@@ -31,7 +31,7 @@ public class StudentService {
              br.close();
              System.out.println(students.size()+"students loaded");
          }catch (Exception e){
-             e.getMessage();
+             e.printStackTrace();
          }
      }
 
@@ -69,8 +69,9 @@ public class StudentService {
      }
 
      public void sortByMarks(){
-        students.sort(Comparator.comparingDouble(student -> student.getMarks()));
+         students.sort(Comparator.comparingDouble(student -> student.getMarks()));
          System.out.println("Students marks by marks");
+         displayStudents();
      }
 
 

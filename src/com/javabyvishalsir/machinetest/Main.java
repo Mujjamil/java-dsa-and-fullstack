@@ -5,9 +5,9 @@ public class Main {
         StudentService ss = new StudentService();
         ss.readStudent();
 //        ss.displayStudents();
-        ss.searchByname("Sneha Kulkarni");
-        ss.searchByDepartmentNo("Electronics");
-        ss.searchByrollNo(125);
-
+//        ss.searchByname("Sneha Kulkarni");
+//        ss.searchByDepartmentNo("Electronics");
+//        ss.searchByrollNo(125);
+        ss.sortByMarks();
     }
 }
