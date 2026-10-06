@@ -10,6 +10,6 @@ public class VideoFile extends MediaFile{
 
     @Override
     public void play() {
-        System.out.println("Plyaing video in"+resolution+"-"+getFileName());
+        System.out.println("Plyaing video in"+resolution);
     }
 }
