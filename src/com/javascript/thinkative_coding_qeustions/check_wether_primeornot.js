@@ -12,7 +12,7 @@ function isPrime(num){
     }
     return true;
 }
-console.log(isPrimeWithSqrt(7));
+// console.log(isPrimeWithSqrt(7));
 
 //by using square root
 function isPrimeWithSqrt(num){
