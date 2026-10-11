@@ -12,3 +12,4 @@ console.log(reversed1("Mujjamil"));
 function reversed1(str){
     return str.split("").reverse().join();
 }
+

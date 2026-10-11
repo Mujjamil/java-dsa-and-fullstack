@@ -14,3 +14,18 @@ function findDupliicate(arr){
 let arr = [1,1,2,2,3,4,5,6,6,7,7]
 
 console.log("the duplicate numbers from : "+arr+" : "+findDupliicate(arr));
+
+
+function findDuplicate(arr){
+    let seen = new Set();
+    let duplicate = new Set();
+
+    for(num of arr){
+        if(seen.has(num)){
+            duplicate.add(num)
+        }
+        seen.add(num)
+    }
+
+    return [...duplicate]
+}
