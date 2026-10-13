@@ -16,8 +16,8 @@ console.log(isDuplicate([1,2,3,4,5]));
 function isDuplicate(arr){
     result = [];
     for(num of arr){
-        if(!result.includes){
-            result.push[arr]
+        if(!result.includes[num]){
+            result.push[num]
         }
     }
     return result
