@@ -1,4 +1,4 @@
-function reverse(str){
+function reversee(str){
     let reversed = "";
     for(let i = str.length-1 ; i >= 0 ; i--){
         reversed += str[i];
@@ -10,6 +10,5 @@ console.log(reversed1("Mujjamil"));
 //used last element and went till first 
 
 function reversed1(str){
-    return str.split("").reverse().join();
+   return str.split("").reverse().join("")
 }
-
