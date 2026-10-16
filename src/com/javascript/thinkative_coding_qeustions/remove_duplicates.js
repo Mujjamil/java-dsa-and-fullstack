@@ -23,3 +23,8 @@ function isDuplicate(arr){
     return result
 }
 
+//shallow copy means create new outer object. but nested object remains shared.
+//deep copy creates outer objcet. and also create nested object whichh should be different \
+
+
+//this keyword which refers to object which associated with its current function . and its depend on how the function is called.

@@ -14,3 +14,17 @@ function secondLargest(arr){
 
 let arr = [1,2,3,4,6]
 console.log(secondLargest(arr));
+
+function secondLargest(arr){
+    let largest = arr[0];
+    let secondLargest = arr[1];
+    for(let num of arr){
+        if(num > largest ){
+            secondLargest = largest
+            largest = num;
+        }else if(num > secondLargest && num !== largest){
+            secondLargest = num;
+        }
+    }
+    return secondLargest;
+}

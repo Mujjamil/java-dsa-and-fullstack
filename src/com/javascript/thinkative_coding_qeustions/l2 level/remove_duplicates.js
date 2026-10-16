@@ -10,7 +10,7 @@ function removeDuplicate(arr){
     return result;
 }
 
-// console.log(removeduplicatesWithFilter([1,2,2,3,3,4,5,6]));
+console.log(removeDuplicate([1,22,2,2,3,3,4,5,6]));
 
 
 //using for loop 

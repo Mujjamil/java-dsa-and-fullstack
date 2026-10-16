@@ -1,6 +1,7 @@
 let number = [4,5,6,7,9,1];
-number.sort((a,b)=> a-b)
-console.log(bubbleSort([1,4,7,8,9,2]));
+number.sort((a,b)=> a- b)
+console.log(number);
+
 
 //using built in method sort 
 
@@ -17,5 +18,5 @@ function bubbleSort(arr){
     return arr;
 }
 
-console.log(bubbleSort([1,4,5,3,2]));
+// console.log(bubbleSort([1,4,5,3,2]));
 //solved using bubble sort algorithm with taking two loops for comparing the value

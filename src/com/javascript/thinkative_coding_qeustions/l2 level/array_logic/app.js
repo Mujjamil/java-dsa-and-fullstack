@@ -19,8 +19,9 @@ function calculateArray(arr){
     },0)
 }
 
-let arr = [1, [2, [3, 4]]]
-let result = arr.flat(arr)
+let arr = [1, [2, 3], [4, [5, 6]],[[33,[[44]]]]];
+let result = arr.flat(4)
+console.log(result);
 
 
 let obj = [
@@ -34,18 +35,15 @@ let obj = [
 
 let arr1 = [1,4,,2,5,6,9,8]
 
-function sortWithoutSortMethod(arr){
-
+function sort(arr){
     for(let i = 0 ; i < arr.length ; i++){
-        for(let j = 0 ; j < arr.length - i - 1; j++){
+        for(let j = 0 ; j < arr.length - i - 1 ; j++){
             if(arr[j] > arr[j+1]){
-                let temp = arr[j];
-                arr[j] = arr[j+1];
+                let temp = arr[j]
+                arr[j] = arr[j+1]
                 arr[j+1] = temp
             }
         }
     }
-
 }
-    
 
