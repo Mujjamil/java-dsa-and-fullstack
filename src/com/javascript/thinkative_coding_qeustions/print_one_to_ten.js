@@ -1,11 +1,9 @@
-function printNumber(n){
-    if(n > 10){
-        return;
+function printnummm(num){
+    if(num > 10){
+        return 
     }
-
-    console.log(n);
-    printNumber(n+1)
-    
+    console.log(num);
+    return printnummm(num+1)
 }
 
-console.log(printNumber(1));
+console.log(printnummm(1));
