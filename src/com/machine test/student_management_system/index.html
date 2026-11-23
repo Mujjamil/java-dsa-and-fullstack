@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+        <form id="studentForm">
+            <label for="name">Student Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" minlength="3" maxlength="50"
+                required><br>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+            <label for="mobile">Mobile Number</label>
+            <input type="number" id="mobile" name="mobile" placeholder="Enter your Mobile Number" minlength="10"
+                maxlength="10" required><br>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required><br>
+
+            <fieldset>
+                <legend>Gender</legend>
+
+                <label>
+                    <input type="radio" name="gender"
+                           value="Male" required>
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender"
+                           value="Female">
+                    Female
+                </label>
+
+                <label>
+                    <input type="radio" name="gender"
+                           value="Other">
+                    Other
+                </label>
+            </fieldset>
+            
+            <label for="course">Course</label>
+            <select name="course" id="course" required>
+                <option value="">Select Course</option>
+                <option value="java">Java</option>
+                <option value="Python">Python</option>
+                <option value="ReactJs">ReactJs</option>
+                <option value="MERN">Mern</option>
+            </select>
+
+
+            <fieldset>
+                <legend>Skills</legend>
+                <label>
+                    <input type="checkbox" name="skills" value="html">HTML
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="css">CSS
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="javascript">Javascript
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="react">React
+                </label>
+            </fieldset>
+
+            <label for="address">Address</label>
+            <textarea name="address" id="address" rows="4" placeholder="Enter your Address" minlength="10" maxlength="200"></textarea>
+
+            <button type="submit">Register Student</button>
+
+        </form>
+    
+</body>
+
+</html>
